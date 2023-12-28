@@ -48,9 +48,9 @@ export class BackendService {
       catchError(this.handleError) 
       ) 
   }
-  postCanvasKalender(id: any, item: any): Observable <TimeEdit> {
+  postCanvasKalender(item: any): Observable <TimeEdit> {
     return this.HttpClient
-    .put<TimeEdit>(this.getKursListURL + '/' + id, JSON.stringify(item), this.httpOptions)
+    .put<TimeEdit>(this.getKursListURL, JSON.stringify(item), this.httpOptions)
     .pipe(
       retry(2),
       catchError(this.handleError)

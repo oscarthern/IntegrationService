@@ -7,5 +7,4 @@ export interface TimeEdit {
     location_name: string;
     start_at: Date
     title: string;
-    
 }
